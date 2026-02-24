@@ -44,7 +44,7 @@ function QuizContent() {
   const currentQ = questions[currentIndex];
   const stageName =
     stageId === "review"
-      ? "å¾©ç¿ã¢ã¼ã"
+      ? "復習モード"
       : STAGES.find((s) => s.id === stageId)?.name || "";
 
   const correctIndex = currentQ
@@ -117,7 +117,7 @@ function QuizContent() {
   if (!currentQ || !progress) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse text-slate-400">æºåä¸­...</div>
+        <div className="animate-pulse text-slate-400">準備中...</div>
       </div>
     );
   }
@@ -132,7 +132,7 @@ function QuizContent() {
             onClick={() => router.back()}
             className="text-slate-500 text-sm active:text-slate-700 p-1"
           >
-            â çµäº
+            ← 終了
           </button>
           <span className="text-sm font-medium text-slate-600">{stageName}</span>
           <span className="text-sm text-slate-500">
@@ -160,10 +160,10 @@ function QuizContent() {
               }`}
             >
               {currentQ.difficulty === 1
-                ? "åºæ¬"
+                ? "基本"
                 : currentQ.difficulty === 2
-                ? "æ¨æº"
-                : "å¿ç¨"}
+                ? "標準"
+                : "応用"}
             </span>
             {currentQ.tags.slice(0, 2).map((tag) => (
               <span
@@ -231,8 +231,8 @@ function QuizContent() {
               <span className="text-sm font-bold text-blue-700">
                 {selectedIndex !== null &&
                 currentQ.choices[selectedIndex].id === currentQ.correct
-                  ? "â­ æ­£è§£ï¼"
-                  : "â ä¸æ­£è§£"}
+                  ? "⭐ 正解！"
+                  : "✗ 不正解"}
               </span>
             </div>
             <p className="text-sm text-blue-800 leading-relaxed">
@@ -249,8 +249,8 @@ function QuizContent() {
             className="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl active:bg-blue-700 transition-colors text-base"
           >
             {currentIndex >= questions.length - 1
-              ? "çµæãè¦ã"
-              : "æ¬¡ã®åé¡ã¸"}
+              ? "結果を見る"
+              : "次の問題へ"}
           </button>
         </div>
       )}
@@ -263,7 +263,7 @@ export default function QuizPage() {
     <Suspense
       fallback={
         <div className="flex items-center justify-center min-h-screen">
-          <div className="animate-pulse text-slate-400">æºåä¸­...</div>
+          <div className="animate-pulse text-slate-400">準備中...</div>
         </div>
       }
     >
