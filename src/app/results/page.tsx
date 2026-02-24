@@ -28,7 +28,7 @@ function ResultsContent() {
   if (!progress) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse text-slate-400">èª­ã¿è¾¼ã¿ä¸­...</div>
+        <div className="animate-pulse text-slate-400">読み込み中...</div>
       </div>
     );
   }
@@ -37,7 +37,7 @@ function ResultsContent() {
   const wrongResults = session?.results.filter((r) => !r.isCorrect) || [];
   const stageName =
     stageId === "review"
-      ? "å¾©ç¿ã¢ã¼ã"
+      ? "復習モード"
       : STAGES.find((s) => s.id === stageId)?.name || "";
 
   const formatTime = (ms: number) => {
@@ -57,32 +57,32 @@ function ResultsContent() {
   return (
     <div className="px-4 pt-6 pb-24">
       <div className="text-center mb-6">
-        <h1 className="text-xl font-bold text-slate-800">ã»ãã·ã§ã³çµæ</h1>
+        <h1 className="text-xl font-bold text-slate-800">セッション結果</h1>
         <p className="text-sm text-slate-500 mt-1">{stageName}</p>
       </div>
 
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-6">
         <div className="flex justify-center relative">
-          <ScoreRing score={score} label="ã»ãã·ã§ã³ã¹ã³ã¢" />
+          <ScoreRing score={score} label="セッションスコア" />
         </div>
         <div className="grid grid-cols-3 gap-4 mt-6">
           <div className="text-center">
             <div className="text-2xl font-bold text-slate-800">
               {correct}/{total}
             </div>
-            <div className="text-xs text-slate-500 mt-1">æ­£ç­æ°</div>
+            <div className="text-xs text-slate-500 mt-1">正答数</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-slate-800">
               {Math.round((correct / total) * 100)}%
             </div>
-            <div className="text-xs text-slate-500 mt-1">æ­£ç­ç</div>
+            <div className="text-xs text-slate-500 mt-1">正答率</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-slate-800">
               {formatTime(time)}
             </div>
-            <div className="text-xs text-slate-500 mt-1">æè¦æé</div>
+            <div className="text-xs text-slate-500 mt-1">所要時間</div>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ function ResultsContent() {
       <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100 mb-6">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-blue-800">
-            ç·åã¹ã³ã¢
+            総合スコア
           </span>
           <span className="text-lg font-bold text-blue-700">
             {totalScore} / 1000
@@ -101,7 +101,7 @@ function ResultsContent() {
       {wrongResults.length > 0 && (
         <div className="mb-6">
           <h2 className="text-sm font-bold text-slate-700 mb-3">
-            ééããåé¡ ({wrongResults.length}å)
+            間違えた問題 ({wrongResults.length}問)
           </h2>
           <div className="space-y-3">
             {wrongResults.map((r) => {
@@ -117,10 +117,10 @@ function ResultsContent() {
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full">
-                      ããªã: {q.choices[r.selectedIndex]?.text}
+                      あなた: {q.choices[r.selectedIndex]?.text}
                     </span>
                     <span className="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full">
-                      æ­£è§£: {q.choices[r.correctIndex]?.text}
+                      正解: {q.choices[r.correctIndex]?.text}
                     </span>
                   </div>
                   <p className="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -136,7 +136,7 @@ function ResultsContent() {
       {weakTags.length > 0 && (
         <div className="mb-6">
           <h2 className="text-sm font-bold text-slate-700 mb-3">
-            å¼±ç¹ã¿ã°åæ
+            弱点タグ分析
           </h2>
           <div className="bg-white rounded-xl p-4 border border-slate-100">
             {weakTags.map(([tag, data]) => (
@@ -163,13 +163,13 @@ function ResultsContent() {
           href={`/quiz?stage=${stageId}`}
           className="block w-full bg-blue-600 text-white font-bold py-4 rounded-2xl text-center active:bg-blue-700 transition-colors"
         >
-          ããä¸åº¦ãã£ã¬ã³ã¸
+          もう一度チャレンジ
         </Link>
         <Link
           href="/"
           className="block w-full bg-white text-slate-700 font-bold py-4 rounded-2xl text-center border border-slate-200 active:bg-slate-50 transition-colors"
         >
-          ãã¼ã ã«æ»ã
+          ホームに戻る
         </Link>
       </div>
     </div>
@@ -181,7 +181,7 @@ export default function ResultsPage() {
     <Suspense
       fallback={
         <div className="flex items-center justify-center min-h-screen">
-          <div className="animate-pulse text-slate-400">èª­ã¿è¾¼ã¿ä¸­...</div>
+          <div className="animate-pulse text-slate-400">読み込み中...</div>
         </div>
       }
     >
