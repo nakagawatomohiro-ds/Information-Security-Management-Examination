@@ -47,18 +47,22 @@ function QuizContent() {
       ? "å¾©ç¿ã¢ã¼ã"
       : STAGES.find((s) => s.id === stageId)?.name || "";
 
+  const correctIndex = currentQ
+    ? currentQ.choices.findIndex((c) => c.id === currentQ.correct)
+    : -1;
+
   const handleSelect = useCallback(
     (index: number) => {
       if (selectedIndex !== null) return;
       setSelectedIndex(index);
       setShowExplanation(true);
-
       const timeSpent = Date.now() - questionStartTime;
+      const ci = currentQ.choices.findIndex((c) => c.id === currentQ.correct);
       const result: QuestionResult = {
         questionId: currentQ.id,
         selectedIndex: index,
-        correctIndex: currentQ.answerIndex,
-        isCorrect: index === currentQ.answerIndex,
+        correctIndex: ci,
+        isCorrect: currentQ.choices[index].id === currentQ.correct,
         timeSpent,
       };
       setResults((prev) => [...prev, result]);
@@ -71,7 +75,6 @@ function QuizContent() {
       setFinished(true);
       return;
     }
-
     setCurrentIndex((i) => i + 1);
     setSelectedIndex(null);
     setShowExplanation(false);
@@ -80,10 +83,8 @@ function QuizContent() {
 
   useEffect(() => {
     if (!finished || !progress) return;
-
     const resolvedStageId: StageId =
       stageId === "review" ? "basics" : stageId;
-
     const session: SessionResult = {
       id: `session-${Date.now()}`,
       stageId: resolvedStageId,
@@ -99,7 +100,6 @@ function QuizContent() {
       }),
       totalTime: Date.now() - sessionStartTime,
     };
-
     const newProgress = addSessionResult(progress, session);
     saveProgress(newProgress);
 
@@ -132,14 +132,13 @@ function QuizContent() {
             onClick={() => router.back()}
             className="text-slate-500 text-sm active:text-slate-700 p-1"
           >
-            â çµäº
+            â çµäº
           </button>
           <span className="text-sm font-medium text-slate-600">{stageName}</span>
           <span className="text-sm text-slate-500">
             {currentIndex + 1} / {questions.length}
           </span>
         </div>
-
         <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-blue-500 rounded-full transition-all duration-300"
@@ -182,11 +181,12 @@ function QuizContent() {
 
         <div className="space-y-3">
           {currentQ.choices.map((choice, i) => {
+            const isCorrectChoice = choice.id === currentQ.correct;
             let style = "bg-white border-slate-200 text-slate-700";
             if (selectedIndex !== null) {
-              if (i === currentQ.answerIndex) {
+              if (isCorrectChoice) {
                 style = "bg-green-50 border-green-400 text-green-800";
-              } else if (i === selectedIndex && i !== currentQ.answerIndex) {
+              } else if (i === selectedIndex && !isCorrectChoice) {
                 style = "bg-red-50 border-red-400 text-red-800";
               } else {
                 style = "bg-slate-50 border-slate-200 text-slate-400";
@@ -195,7 +195,7 @@ function QuizContent() {
 
             return (
               <button
-                key={i}
+                key={choice.id}
                 onClick={() => handleSelect(i)}
                 disabled={selectedIndex !== null}
                 className={`w-full text-left p-4 rounded-xl border-2 transition-all min-h-[52px] ${style} ${
@@ -207,9 +207,9 @@ function QuizContent() {
                 <div className="flex items-start gap-3">
                   <span
                     className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-xs font-bold ${
-                      selectedIndex !== null && i === currentQ.answerIndex
+                      selectedIndex !== null && isCorrectChoice
                         ? "border-green-500 bg-green-500 text-white"
-                        : selectedIndex === i && i !== currentQ.answerIndex
+                        : selectedIndex === i && !isCorrectChoice
                         ? "border-red-500 bg-red-500 text-white"
                         : "border-slate-300 text-slate-500"
                     }`}
@@ -217,7 +217,7 @@ function QuizContent() {
                     {String.fromCharCode(65 + i)}
                   </span>
                   <span className="text-sm leading-relaxed pt-0.5">
-                    {choice}
+                    {choice.text}
                   </span>
                 </div>
               </button>
@@ -229,7 +229,10 @@ function QuizContent() {
           <div className="mt-4 bg-blue-50 rounded-2xl p-4 border border-blue-100">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm font-bold text-blue-700">
-                {selectedIndex === currentQ.answerIndex ? "â­ æ­£è§£ï¼" : "â ä¸æ­£è§£"}
+                {selectedIndex !== null &&
+                currentQ.choices[selectedIndex].id === currentQ.correct
+                  ? "â­ æ­£è§£ï¼"
+                  : "â ä¸æ­£è§£"}
               </span>
             </div>
             <p className="text-sm text-blue-800 leading-relaxed">
@@ -245,7 +248,9 @@ function QuizContent() {
             onClick={handleNext}
             className="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl active:bg-blue-700 transition-colors text-base"
           >
-            {currentIndex >= questions.length - 1 ? "çµæãè¦ã" : "æ¬¡ã®åé¡ã¸"}
+            {currentIndex >= questions.length - 1
+              ? "çµæãè¦ã"
+              : "æ¬¡ã®åé¡ã¸"}
           </button>
         </div>
       )}
