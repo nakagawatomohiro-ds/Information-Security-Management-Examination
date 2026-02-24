@@ -7,20 +7,25 @@ export type StageId =
   | "legal"
   | "exam-strategy";
 
+export interface Choice {
+  id: string;
+  text: string;
+}
+
 export interface Question {
   id: string;
-  stage: StageId;
+  stageId: StageId;
   difficulty: Difficulty;
-  question: string;
-  choices: string[];
-  answerIndex: number;
+  body: string;
+  choices: Choice[];
+  correct: string;
   explanation: string;
   tags: string[];
 }
 
-export interface ShuffledQuestion extends Omit<Question, "choices" | "answerIndex"> {
-  choices: string[];
-  answerIndex: number;
+export interface ShuffledQuestion extends Omit<Question, "choices" | "correct"> {
+  choices: Choice[];
+  correct: string;
   originalId: string;
 }
 
@@ -44,33 +49,21 @@ export interface SessionResult {
 export interface QuestionStats {
   questionId: string;
   attempts: number;
-  correctCount: number;
-  lastAttempt: string;
-  nextReview: string | null;
-  srsLevel: number;
+  correct: number;
+  averageTime: number;
 }
 
 export interface UserProgress {
-  totalScore: number;
   sessions: SessionResult[];
   questionStats: Record<string, QuestionStats>;
-  streak: number;
-  lastStudyDate: string | null;
-  startDate: string;
+  lastStudyDate: string;
+  streakDays: number;
 }
 
-export interface StageInfo {
-  id: StageId;
-  name: string;
-  description: string;
-  icon: string;
-  color: string;
-}
-
-export const STAGES: StageInfo[] = [
-  { id: "basics", name: "基礎理解", description: "情報セキュリティの基本概念・CIA三要素・脅威と脆弱性", icon: "📚", color: "bg-blue-500" },
-  { id: "management", name: "組織と管理", description: "ISMS・リスクマネジメント・セキュリティポリシー", icon: "🏢", color: "bg-purple-500" },
-  { id: "technology", name: "技術理解", description: "暗号化・認証・ネットワークセキュリティ", icon: "🔧", color: "bg-green-500" },
-  { id: "legal", name: "法令・コンプライアンス", description: "個人情報保護法・不正アクセス禁止法・各種ガイドライン", icon: "⚖️", color: "bg-amber-500" },
-  { id: "exam-strategy", name: "試験対応力", description: "横断問題・ケーススタディ・時間管理戦略", icon: "🎯", color: "bg-red-500" },
+export const STAGES: { id: StageId; name: string; description: string; icon: string }[] = [
+  { id: "basics", name: "情報セキュリティ基礎", description: "CIA、脅威、脆弱性、リスクの基本概念", icon: "🛡️" },
+  { id: "management", name: "情報セキュリティ管理", description: "ISMS、リスクマネジメント、セキュリティポリシー", icon: "📋" },
+  { id: "technology", name: "情報セキュリティ対策技術", description: "暗号化、認証、ファイアウォール、マルウェア対策", icon: "🔧" },
+  { id: "legal", name: "法務・コンプライアンス", description: "個人情報保護法、不正アクセス禁止法、知的財産", icon: "⚖️" },
+  { id: "exam-strategy", name: "総合・試験対策", description: "横断的知識と実践的な問題演習", icon: "🎯" },
 ];
