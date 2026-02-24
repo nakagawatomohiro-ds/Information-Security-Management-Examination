@@ -44,7 +44,7 @@ function QuizContent() {
   const currentQ = questions[currentIndex];
   const stageName =
     stageId === "review"
-      ? "復習モード"
+      ? "å¾©ç¿ã¢ã¼ã"
       : STAGES.find((s) => s.id === stageId)?.name || "";
 
   const handleSelect = useCallback(
@@ -85,7 +85,7 @@ function QuizContent() {
       stageId === "review" ? "basics" : stageId;
 
     const session: SessionResult = {
-      id: \`session-\${Date.now()}\`,
+      id: `session-${Date.now()}`,
       stageId: resolvedStageId,
       date: new Date().toISOString(),
       results,
@@ -111,13 +111,13 @@ function QuizContent() {
       stage: stageId,
       sessionId: session.id,
     });
-    router.push(\`/results?\${params.toString()}\`);
+    router.push(`/results?${params.toString()}`);
   }, [finished, progress, results, stageId, sessionStartTime, router]);
 
   if (!currentQ || !progress) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse text-slate-400">準備中...</div>
+        <div className="animate-pulse text-slate-400">æºåä¸­...</div>
       </div>
     );
   }
@@ -132,7 +132,7 @@ function QuizContent() {
             onClick={() => router.back()}
             className="text-slate-500 text-sm active:text-slate-700 p-1"
           >
-            ✕ 終了
+            â çµäº
           </button>
           <span className="text-sm font-medium text-slate-600">{stageName}</span>
           <span className="text-sm text-slate-500">
@@ -143,7 +143,7 @@ function QuizContent() {
         <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-blue-500 rounded-full transition-all duration-300"
-            style={{ width: \`\${progressPct}%\` }}
+            style={{ width: `${progressPct}%` }}
           />
         </div>
       </div>
@@ -152,19 +152,19 @@ function QuizContent() {
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 mb-4">
           <div className="flex items-center gap-2 mb-3">
             <span
-              className={\`text-xs px-2 py-0.5 rounded-full font-medium \${
+              className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                 currentQ.difficulty === 1
                   ? "bg-green-100 text-green-700"
                   : currentQ.difficulty === 2
                   ? "bg-amber-100 text-amber-700"
                   : "bg-red-100 text-red-700"
-              }\`}
+              }`}
             >
               {currentQ.difficulty === 1
-                ? "基本"
+                ? "åºæ¬"
                 : currentQ.difficulty === 2
-                ? "標準"
-                : "応用"}
+                ? "æ¨æº"
+                : "å¿ç¨"}
             </span>
             {currentQ.tags.slice(0, 2).map((tag) => (
               <span
@@ -198,21 +198,21 @@ function QuizContent() {
                 key={i}
                 onClick={() => handleSelect(i)}
                 disabled={selectedIndex !== null}
-                className={\`w-full text-left p-4 rounded-xl border-2 transition-all min-h-[52px] \${style} \${
+                className={`w-full text-left p-4 rounded-xl border-2 transition-all min-h-[52px] ${style} ${
                   selectedIndex === null
                     ? "active:border-blue-400 active:bg-blue-50"
                     : ""
-                }\`}
+                }`}
               >
                 <div className="flex items-start gap-3">
                   <span
-                    className={\`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-xs font-bold \${
+                    className={`w-7 h-7 rounded-full border-2 flex items-center justify-center shrink-0 text-xs font-bold ${
                       selectedIndex !== null && i === currentQ.answerIndex
                         ? "border-green-500 bg-green-500 text-white"
                         : selectedIndex === i && i !== currentQ.answerIndex
                         ? "border-red-500 bg-red-500 text-white"
                         : "border-slate-300 text-slate-500"
-                    }\`}
+                    }`}
                   >
                     {String.fromCharCode(65 + i)}
                   </span>
@@ -229,7 +229,7 @@ function QuizContent() {
           <div className="mt-4 bg-blue-50 rounded-2xl p-4 border border-blue-100">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm font-bold text-blue-700">
-                {selectedIndex === currentQ.answerIndex ? "⭕ 正解！" : "❌ 不正解"}
+                {selectedIndex === currentQ.answerIndex ? "â­ æ­£è§£ï¼" : "â ä¸æ­£è§£"}
               </span>
             </div>
             <p className="text-sm text-blue-800 leading-relaxed">
@@ -245,7 +245,7 @@ function QuizContent() {
             onClick={handleNext}
             className="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl active:bg-blue-700 transition-colors text-base"
           >
-            {currentIndex >= questions.length - 1 ? "結果を見る" : "次の問題へ"}
+            {currentIndex >= questions.length - 1 ? "çµæãè¦ã" : "æ¬¡ã®åé¡ã¸"}
           </button>
         </div>
       )}
@@ -258,7 +258,7 @@ export default function QuizPage() {
     <Suspense
       fallback={
         <div className="flex items-center justify-center min-h-screen">
-          <div className="animate-pulse text-slate-400">準備中...</div>
+          <div className="animate-pulse text-slate-400">æºåä¸­...</div>
         </div>
       }
     >
