@@ -1,0 +1,24 @@
+{
+  "name": "DSCSS 情報セキュリティマネジメント学習",
+  "short_name": "DSCSS SG学習",
+  "description": "情報セキュリティマネジメント試験合格を目指す学習クイズアプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e40af",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
