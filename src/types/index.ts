@@ -79,9 +79,9 @@ export interface StageInfo {
 }
 
 export const STAGES: StageInfo[] = [
-  { id: "basics", name: "åºç¤çè§£", description: "æå ±ã»ã­ã¥ãªãã£ã®åºæ¬æ¦å¿µã»CIAä¸è¦ç´ ã»èå¨ã¨èå¼±æ§", icon: "ð", color: "bg-blue-500" },
-  { id: "management", name: "çµç¹ã¨ç®¡ç", description: "ISMSã»ãªã¹ã¯ããã¸ã¡ã³ãã»ã»ã­ã¥ãªãã£ããªã·ã¼", icon: "ð¢", color: "bg-purple-500" },
-  { id: "technology", name: "æè¡çè§£", description: "æå·åã»èªè¨¼ã»ãããã¯ã¼ã¯ã»ã­ã¥ãªãã£", icon: "ð§", color: "bg-green-500" },
-  { id: "legal", name: "æ³ä»¤ã»ã³ã³ãã©ã¤ã¢ã³ã¹", description: "åäººæå ±ä¿è­·æ³ã»ä¸æ­£ã¢ã¯ã»ã¹ç¦æ­¢æ³ã»åç¨®ã¬ã¤ãã©ã¤ã³", icon: "âï¸", color: "bg-amber-500" },
-  { id: "exam-strategy", name: "è©¦é¨å¯¾å¿å", description: "æ¨ªæ­åé¡ã»ã±ã¼ã¹ã¹ã¿ãã£ã»æéç®¡çæ¦ç¥", icon: "ð¯", color: "bg-red-500" },
+  { id: "basics", name: "基礎理解", description: "情報セキュリティの基本概念・CIA三要素・脅威と脆弱性", icon: "📚", color: "bg-blue-500" },
+  { id: "management", name: "組織と管理", description: "ISMS・リスクマネジメント・セキュリティポリシー", icon: "🏢", color: "bg-purple-500" },
+  { id: "technology", name: "技術理解", description: "暗号化・認証・ネットワークセキュリティ", icon: "🔧", color: "bg-green-500" },
+  { id: "legal", name: "法令・コンプライアンス", description: "個人情報保護法・不正アクセス禁止法・各種ガイドライン", icon: "⚖️", color: "bg-amber-500" },
+  { id: "exam-strategy", name: "試験対応力", description: "横断問題・ケーススタディ・時間管理戦略", icon: "🎯", color: "bg-red-500" },
 ];
