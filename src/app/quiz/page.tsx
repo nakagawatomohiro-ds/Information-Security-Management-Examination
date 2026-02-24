@@ -176,7 +176,7 @@ function QuizContent() {
             ))}
           </div>
           <p className="text-base font-medium text-slate-800 leading-relaxed">
-            {currentQ.question}
+            {currentQ.body}
           </p>
         </div>
 
