@@ -72,7 +72,7 @@ export default function ReviewPage() {
                       className="bg-white rounded-xl p-3 border border-slate-100"
                     >
                       <p className="text-sm text-slate-700 line-clamp-2">
-                        {q.question}
+                        {q.body}
                       </p>
                       <div className="flex gap-2 mt-2">
                         {q.tags.slice(0, 2).map((tag) => (
@@ -115,7 +115,7 @@ export default function ReviewPage() {
                       className="bg-white rounded-xl p-3 border border-slate-100"
                     >
                       <p className="text-sm text-slate-700 line-clamp-2">
-                        {q.question}
+                        {q.body}
                       </p>
                       <div className="flex gap-2 mt-2">
                         {q.tags.slice(0, 2).map((tag) => (
