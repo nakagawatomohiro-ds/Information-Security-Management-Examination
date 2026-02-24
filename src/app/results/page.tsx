@@ -234,7 +234,7 @@ function ResultsContent() {
 
                   <p className="text-sm text-slate-800 font-medium mb-2">
 
-                    {q.question}
+                    {q.body}
 
                   </p>
 
