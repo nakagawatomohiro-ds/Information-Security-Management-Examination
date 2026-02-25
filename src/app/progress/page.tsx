@@ -23,7 +23,7 @@ export default function ProgressPage() {
   if (!progress) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse text-slate-400">èª­ã¿è¾¼ã¿ä¸­...</div>
+        <div className="animate-pulse text-slate-400">読み込み中...</div>
       </div>
     );
   }
@@ -45,23 +45,24 @@ export default function ProgressPage() {
 
   return (
     <div className="px-4 pt-6 pb-24">
-      <h1 className="text-xl font-bold text-slate-800 mb-6">å­¦ç¿é²æ</h1>
+      <h1 className="text-xl font-bold text-slate-800 mb-6">学習進捗</h1>
 
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-6">
         <div className="flex justify-center relative">
-          <ScoreRing score={totalScore} label="ç·åã¹ã³ã¢" />
+          <ScoreRing score={totalScore} label="総合スコア" />
         </div>
+
         {passing ? (
           <div className="mt-4 text-center bg-green-50 rounded-xl py-3 px-4">
-            <span className="text-green-700 font-bold">ð åæ ¼åå°éï¼</span>
+            <span className="text-green-700 font-bold">🎉 合格圏到達！</span>
             <p className="text-xs text-green-600 mt-1">
-              å¨ã¹ãã¼ã¸70%ä»¥ä¸ & 800ç¹ä»¥ä¸éæ
+              全ステージ70%以上 & 800点以上達成
             </p>
           </div>
         ) : (
           <div className="mt-4 text-center">
             <p className="text-sm text-slate-500">
-              åæ ¼å¤å®: ç·å800ç¹ä»¥ä¸ & å¨ã¹ãã¼ã¸70%ä»¥ä¸
+              合格判定: 総合800点以上 & 全ステージ70%以上
             </p>
           </div>
         )}
@@ -70,24 +71,24 @@ export default function ProgressPage() {
       <div className="grid grid-cols-3 gap-3 mb-6">
         <div className="bg-white rounded-xl p-3 text-center border border-slate-100">
           <div className="text-xl font-bold text-slate-800">{totalSessions}</div>
-          <div className="text-xs text-slate-500">ã»ãã·ã§ã³æ°</div>
+          <div className="text-xs text-slate-500">セッション数</div>
         </div>
         <div className="bg-white rounded-xl p-3 text-center border border-slate-100">
           <div className="text-xl font-bold text-slate-800">{totalQuestions}</div>
-          <div className="text-xs text-slate-500">å­¦ç¿æ¸ã¿åé¡</div>
+          <div className="text-xs text-slate-500">学習済み問題</div>
         </div>
         <div className="bg-white rounded-xl p-3 text-center border border-slate-100">
           <div className="text-xl font-bold text-amber-600">
-            {progress.streak}æ¥
+            {progress.streak}日
           </div>
-          <div className="text-xs text-slate-500">é£ç¶å­¦ç¿</div>
+          <div className="text-xs text-slate-500">連続学習</div>
         </div>
       </div>
 
       {recentSessions.length > 0 && (
         <div className="bg-white rounded-2xl p-5 border border-slate-100 mb-6">
           <h2 className="text-sm font-bold text-slate-700 mb-4">
-            ã¹ã³ã¢æ¨ç§»ï¼ç´è¿{recentSessions.length}åï¼
+            {`スコア推移（直近${recentSessions.length}回）`}
           </h2>
           <div className="flex items-end gap-1 h-24">
             {recentSessions.map((session, i) => {
@@ -111,20 +112,22 @@ export default function ProgressPage() {
             })}
           </div>
           <div className="relative -mt-[80%] mb-[60%] ml-0 mr-0">
-            <div className="border-t border-dashed border-green-300 absolute w-full" style={{ bottom: "80%" }} />
+            <div
+              className="border-t border-dashed border-green-300 absolute w-full"
+              style={{ bottom: "80%" }}
+            />
           </div>
         </div>
       )}
 
       <div className="mb-6">
         <h2 className="text-sm font-bold text-slate-700 mb-3">
-          ã¹ãã¼ã¸å¥ç¿çåº¦
+          ステージ別習熟度
         </h2>
         <div className="space-y-3">
           {STAGES.map((stage) => {
             const prog = getStageProgress(progress, stage.id);
             const acc = getStageAccuracy(progress, stage.id);
-
             return (
               <div
                 key={stage.id}
@@ -137,14 +140,14 @@ export default function ProgressPage() {
                   </span>
                   {acc >= 0.7 && prog >= 0.5 && (
                     <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
-                      â
+                      ✓
                     </span>
                   )}
                 </div>
                 <ProgressBar value={prog} color={stage.color} />
                 <div className="flex justify-between mt-2">
                   <span className="text-xs text-slate-500">
-                    å°éåº¦ {Math.round(prog * 100)}%
+                    到達度 {Math.round(prog * 100)}%
                   </span>
                   <span
                     className={`text-xs font-medium ${
@@ -157,7 +160,7 @@ export default function ProgressPage() {
                         : "text-slate-400"
                     }`}
                   >
-                    æ­£ç­ç {acc > 0 ? `${Math.round(acc * 100)}%` : "---"}
+                    正答率 {acc > 0 ? `${Math.round(acc * 100)}%` : "---"}
                   </span>
                 </div>
               </div>
@@ -169,11 +172,14 @@ export default function ProgressPage() {
       {sortedTags.length > 0 && (
         <div className="mb-6">
           <h2 className="text-sm font-bold text-slate-700 mb-3">
-            ã¿ã°å¥å¼±ç¹åæ
+            タグ別弱点分析
           </h2>
           <div className="bg-white rounded-xl border border-slate-100 divide-y divide-slate-50">
             {sortedTags.map(([tag, data]) => (
-              <div key={tag} className="flex items-center justify-between p-3">
+              <div
+                key={tag}
+                className="flex items-center justify-between p-3"
+              >
                 <div className="flex items-center gap-2">
                   <span
                     className={`w-2 h-2 rounded-full ${
@@ -208,12 +214,12 @@ export default function ProgressPage() {
 
       {totalSessions === 0 && (
         <div className="bg-white rounded-2xl p-8 text-center border border-slate-100">
-          <div className="text-4xl mb-4">ð</div>
+          <div className="text-4xl mb-4">📊</div>
           <h2 className="text-lg font-bold text-slate-800 mb-2">
-            ã¾ã ãã¼ã¿ãããã¾ãã
+            まだデータがありません
           </h2>
           <p className="text-sm text-slate-500">
-            ã¯ã¤ãºãè§£ãã¨é²æãè¡¨ç¤ºããã¾ã
+            クイズを解くと進捗が表示されます
           </p>
         </div>
       )}
