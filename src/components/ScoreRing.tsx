@@ -1,3 +1,67 @@
 "use client";
-interface ScoreRingProps{score:number;maxScore?:number;size?:number;strokeWidth?:number;label?:string;}
-export function ScoreRing({score,maxScore=1000,size=160,strokeWidth=12,label}:ScoreRingProps){const radius=(size-strokeWidth)/2;const circumference=2*Math.PI*radius;const progress=Math.min(score/maxScore,1);const offset=circumference-progress*circumference;const getColor=()=>{if(progress>=0.8)return"#247751";if(progress>=0.6)return"#339366";if(progress>=0.4)return"#55ae80";return"#ef4444";};return(<div className="flex flex-col items-center"><svg width={size} height={size} className="-rotate-90"><circle cx={size/2} cy={size/2} r={radius} fill="none" stroke="#dbf0e5" strokeWidth={strokeWidth}/><circle cx={size/2} cy={size/2} r={radius} fill="none" stroke={getColor()} strokeWidth={strokeWidth} strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" className="transition-all duration-1000 ease-out"/></svg>svg><div className="absolute flex flex-col items-center justify-center" style={{width:size,height:size}}><span className="text-3xl font-bold text-brand-900">{score}</span>span><span className="text-xs text-brand-600">/ {maxScore}</span>span></div>div>{label&&<span className="mt-2 text-sm font-medium text-brand-700">{label}</span>span>}</div>div>);}</div>
+
+interface ScoreRingProps {
+  score: number;
+  label: string;
+}
+
+export function ScoreRing({ score, label }: ScoreRingProps) {
+  const percentage = score / 1000;
+  const radius = 60;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference * (1 - percentage);
+
+  const getColor = () => {
+    if (percentage >= 0.8) return "#247751";
+    if (percentage >= 0.5) return "#339366";
+    return "#55ae80";
+  };
+
+  return (
+    <div className="flex flex-col items-center">
+      <svg width="140" height="140" viewBox="0 0 140 140">
+        <circle
+          cx="70"
+          cy="70"
+          r={radius}
+          fill="none"
+          stroke="#e2f5ec"
+          strokeWidth="10"
+        />
+        <circle
+          cx="70"
+          cy="70"
+          r={radius}
+          fill="none"
+          stroke={getColor()}
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          transform="rotate(-90 70 70)"
+          className="transition-all duration-1000"
+        />
+        <text
+          x="70"
+          y="65"
+          textAnchor="middle"
+          className="text-2xl font-bold"
+          fill="#163f2e"
+          fontSize="28"
+        >
+          {score}
+        </text>
+        <text
+          x="70"
+          y="85"
+          textAnchor="middle"
+          fill="#64748b"
+          fontSize="11"
+        >
+          / 1000
+        </text>
+      </svg>
+      <span className="text-xs text-slate-500 mt-1">{label}</span>
+    </div>
+  );
+}
