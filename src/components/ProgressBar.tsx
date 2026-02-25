@@ -1,3 +1,16 @@
-"use client";
-interface ProgressBarProps{value:number;color?:string;height?:number;showLabel?:boolean;}
-export function ProgressBar({value,color="bg-brand-500",height=8,showLabel=false}:ProgressBarProps){const pct=Math.round(Math.min(Math.max(value,0),1)*100);return(<div className="w-full"><div className="w-full bg-brand-100 rounded-full overflow-hidden" style={{height}}><div className={`h-full rounded-full ${color} animate-progress transition-all duration-500`} style={{width:`${pct}%`}}/></div>div>{showLabel&&<span className="text-xs text-brand-600 mt-1">{pct}%</span>span>}</div>div>);}</div>
+interface ProgressBarProps {
+  value: number;
+  color?: string;
+}
+
+export function ProgressBar({ value, color = "bg-brand-500" }: ProgressBarProps) {
+  const pct = Math.min(Math.max(value, 0), 1) * 100;
+  return (
+    <div className="w-full h-2 bg-brand-100 rounded-full overflow-hidden">
+      <div
+        className={`h-full rounded-full transition-all duration-500 ${color}`}
+        style={{ width: `${pct}%` }}
+      />
+    </div>
+  );
+}
