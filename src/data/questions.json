@@ -1,7 +1,7 @@
 [
   {
     "id": "s1-001",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "情報セキュリティの3要素（CIA）に含まれないものはどれか。",
     "choices": [
       { "id": "a", "text": "機密性（Confidentiality）" },
@@ -16,7 +16,7 @@
   },
   {
     "id": "s1-002",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "ソーシャルエンジニアリングの手法として最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "SQLインジェクション" },
@@ -31,7 +31,7 @@
   },
   {
     "id": "s1-003",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "脆弱性に関する記述として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "脆弱性とは、情報資産に損害を与える直接的な原因である" },
@@ -46,7 +46,7 @@
   },
   {
     "id": "s1-004",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "リスクアセスメントの手順として正しい順序はどれか。",
     "choices": [
       { "id": "a", "text": "リスク特定 → リスク分析 → リスク評価" },
@@ -61,7 +61,7 @@
   },
   {
     "id": "s1-005",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "マルウェアの一種であるランサムウェアの特徴として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "利用者のキー入力を記録して外部に送信する" },
@@ -76,7 +76,7 @@
   },
   {
     "id": "s1-006",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "情報資産の分類において、取り扱いの優先度を決める基準として最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "情報のファイルサイズ" },
@@ -91,7 +91,7 @@
   },
   {
     "id": "s1-007",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "ゼロデイ攻撃に関する説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "修正パッチが公開される前の脆弱性を悪用する攻撃" },
@@ -106,7 +106,7 @@
   },
   {
     "id": "s1-008",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "フィッシング攻撃への対策として、最も効果的なものはどれか。",
     "choices": [
       { "id": "a", "text": "ウイルス対策ソフトのインストール" },
@@ -121,7 +121,7 @@
   },
   {
     "id": "s1-009",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "リスク対応の4つの戦略に含まれないものはどれか。",
     "choices": [
       { "id": "a", "text": "リスク回避" },
@@ -136,7 +136,7 @@
   },
   {
     "id": "s1-010",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "APT（Advanced Persistent Threat）攻撃の特徴として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "不特定多数を対象とした大規模な攻撃" },
@@ -151,7 +151,7 @@
   },
   {
     "id": "s1-011",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "情報セキュリティにおけるリスクの定義として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "脅威が脆弱性を利用して情報資産に損害を与える可能性" },
@@ -166,7 +166,7 @@
   },
   {
     "id": "s1-012",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "DoS攻撃とDDoS攻撃の違いとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "DoSはWebサーバへの攻撃で、DDoSはメールサーバへの攻撃" },
@@ -181,7 +181,7 @@
   },
   {
     "id": "s1-013",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "標的型攻撃メールの特徴として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "不特定多数に同一内容のメールを送信する" },
@@ -196,7 +196,7 @@
   },
   {
     "id": "s1-014",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "CVE（Common Vulnerabilities and Exposures）とは何か。",
     "choices": [
       { "id": "a", "text": "ウイルス対策ソフトの名称" },
@@ -211,7 +211,7 @@
   },
   {
     "id": "s1-015",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "パスワードリスト攻撃の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべての文字の組み合わせを総当たりで試行する" },
@@ -226,7 +226,7 @@
   },
   {
     "id": "s1-016",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "情報資産台帳に記載すべき項目として、最も適切でないものはどれか。",
     "choices": [
       { "id": "a", "text": "情報資産の名称と管理者" },
@@ -241,7 +241,7 @@
   },
   {
     "id": "s1-017",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "内部不正による情報漏えい対策として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ファイアウォールの強化" },
@@ -256,7 +256,7 @@
   },
   {
     "id": "s1-018",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "CVSS（Common Vulnerability Scoring System）の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "脆弱性の深刻度を0.0〜10.0のスコアで評価する共通基準" },
@@ -271,7 +271,7 @@
   },
   {
     "id": "s1-019",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "IoT機器のセキュリティリスクとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "処理速度が速すぎて制御不能になる" },
@@ -286,7 +286,7 @@
   },
   {
     "id": "s1-020",
-    "stageId": "stage1",
+    "stageId": "basics",
     "body": "情報セキュリティポリシーの階層構造として、正しいものはどれか。",
     "choices": [
       { "id": "a", "text": "基本方針 → 対策基準 → 実施手順" },
@@ -301,7 +301,7 @@
   },
   {
     "id": "s2-001",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "アクセス制御における「最小権限の原則」の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべてのユーザに同じ権限を付与する" },
@@ -316,7 +316,7 @@
   },
   {
     "id": "s2-002",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "多要素認証で使用される認証要素の組み合わせとして、正しいものはどれか。",
     "choices": [
       { "id": "a", "text": "パスワードとPINコード" },
@@ -331,7 +331,7 @@
   },
   {
     "id": "s2-003",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "ファイアウォールのパケットフィルタリング方式の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "パケットのIPアドレスやポート番号に基づいて通過・遮断を判断する" },
@@ -346,7 +346,7 @@
   },
   {
     "id": "s2-004",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "物理的セキュリティ対策として、最も適切でないものはどれか。",
     "choices": [
       { "id": "a", "text": "入退室管理システムの導入" },
@@ -361,7 +361,7 @@
   },
   {
     "id": "s2-005",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "IDS（侵入検知システム）とIPS（侵入防止システム）の違いとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "IDSは検知のみ行い、IPSは検知に加えて遮断も行う" },
@@ -376,7 +376,7 @@
   },
   {
     "id": "s2-006",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "SSL/TLSの役割として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "メールの暗号化のみを行う" },
@@ -391,7 +391,7 @@
   },
   {
     "id": "s2-007",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "VPNの主な目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "インターネット接続速度の向上" },
@@ -406,7 +406,7 @@
   },
   {
     "id": "s2-008",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "情報セキュリティ教育の目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "従業員のITスキルを向上させる" },
@@ -421,7 +421,7 @@
   },
   {
     "id": "s2-009",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "ディスクの完全暗号化（FDE）の利点として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "PCの処理速度が向上する" },
@@ -436,7 +436,7 @@
   },
   {
     "id": "s2-010",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "WAF（Web Application Firewall）の主な機能として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "メールの送受信を監視する" },
@@ -451,7 +451,7 @@
   },
   {
     "id": "s2-011",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "クリアデスクポリシーの説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "退社時にPCのデスクトップを整理すること" },
@@ -466,7 +466,7 @@
   },
   {
     "id": "s2-012",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "DMZ（非武装地帯）に配置するのに最も適切なサーバはどれか。",
     "choices": [
       { "id": "a", "text": "社内ファイルサーバ" },
@@ -481,7 +481,7 @@
   },
   {
     "id": "s2-013",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "バックアップの「3-2-1ルール」の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "3時間ごとに2つのファイルを1つのメディアに保存する" },
@@ -496,7 +496,7 @@
   },
   {
     "id": "s2-014",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "PKI（公開鍵基盤）における認証局（CA）の役割として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "通信データを暗号化する" },
@@ -511,7 +511,7 @@
   },
   {
     "id": "s2-015",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "セキュリティパッチ管理で最も重要なことはどれか。",
     "choices": [
       { "id": "a", "text": "パッチは年に1回まとめて適用する" },
@@ -526,7 +526,7 @@
   },
   {
     "id": "s2-016",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "職務分掌（Separation of Duties）の目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "業務効率を最大化する" },
@@ -541,7 +541,7 @@
   },
   {
     "id": "s2-017",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "SIEM（Security Information and Event Management）の主な機能はどれか。",
     "choices": [
       { "id": "a", "text": "各種ログを収集・相関分析し、セキュリティインシデントを検出する" },
@@ -556,7 +556,7 @@
   },
   {
     "id": "s2-018",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "秘密鍵と公開鍵を使ったデジタル署名の目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "通信内容を暗号化して盗聴を防止する" },
@@ -571,7 +571,7 @@
   },
   {
     "id": "s2-019",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "ネットワークセグメンテーションの目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ネットワーク全体の通信速度を向上させる" },
@@ -586,7 +586,7 @@
   },
   {
     "id": "s2-020",
-    "stageId": "stage2",
+    "stageId": "management",
     "body": "入退室管理における共連れ（テールゲーティング）対策として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "高解像度の監視カメラを設置する" },
@@ -601,7 +601,7 @@
   },
   {
     "id": "s3-001",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "ISO/IEC 27001における情報セキュリティマネジメントシステム（ISMS）の構築プロセスで、最初に実施する必要があるものはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティポリシーの策定" },
@@ -616,7 +616,7 @@
   },
   {
     "id": "s3-002",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "個人情報保護方針（プライバシーポリシー）として、最小限記載すべき項目として最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "社員の給与体系と福利厚生" },
@@ -631,7 +631,7 @@
   },
   {
     "id": "s3-003",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "個人情報保護法における個人情報の定義として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "生存する個人に関する情報である" },
@@ -646,7 +646,7 @@
   },
   {
     "id": "s3-004",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "不正アクセス禁止法で規制される行為として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "他人のIDとパスワードを使用してコンピュータシステムにアクセスすること" },
@@ -661,7 +661,7 @@
   },
   {
     "id": "s3-005",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "マイナンバー法により企業が取り扱うマイナンバーの適切な管理として、最も重要なものはどれか。",
     "choices": [
       { "id": "a", "text": "マイナンバーをメールで従業員に送付する" },
@@ -676,7 +676,7 @@
   },
   {
     "id": "s3-006",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "内部監査におけるコンプライアンス監査の主な目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "利益を最大化することを確認する" },
@@ -691,7 +691,7 @@
   },
   {
     "id": "s3-007",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "リスク評価において「リスク＝脅威×脆弱性×資産価値」という式が示す意味として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "リスクは3つの独立した要素の組み合わせで決定される" },
@@ -706,7 +706,7 @@
   },
   {
     "id": "s3-008",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "情報セキュリティポリシーの対象範囲として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "IT部門の従業員のみ" },
@@ -721,7 +721,7 @@
   },
   {
     "id": "s3-009",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "アクセス制御（アクセス権限管理）における最小権限の原則（Principle of Least Privilege）の説明として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべてのユーザーに同じ権限を付与する" },
@@ -736,7 +736,7 @@
   },
   {
     "id": "s3-010",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "セキュリティ監査ログの適切な保管・管理方法として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ログを削除しやすいようにUSBに保管する" },
@@ -751,7 +751,7 @@
   },
   {
     "id": "s3-011",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "ISO/IEC 27001の附属書Aに記載されるセキュリティ管理策（コントロール）の組織的管理策（A.5～A.8）に含まれるものはどれか。",
     "choices": [
       { "id": "a", "text": "暗号化技術の導入" },
@@ -766,7 +766,7 @@
   },
   {
     "id": "s3-012",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "データ分類基準を設定する際の主な目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべてのデータに同じ保護レベルを適用する" },
@@ -781,7 +781,7 @@
   },
   {
     "id": "s3-013",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "組織における情報セキュリティ文化の醸成として、最も効果的なアプローチはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティ研修を1回実施すれば十分である" },
@@ -796,7 +796,7 @@
   },
   {
     "id": "s3-014",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "情報セキュリティマネジメントシステムの内部監査の実施頻度として、ISO/IEC 27001で推奨される方法はどれか。",
     "choices": [
       { "id": "a", "text": "5年ごとに1回" },
@@ -811,7 +811,7 @@
   },
   {
     "id": "s3-015",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "個人情報の第三者提供について、個人情報保護法で同意が不要とされるケースはどれか。",
     "choices": [
       { "id": "a", "text": "本人の明示的な同意を得た場合" },
@@ -826,7 +826,7 @@
   },
   {
     "id": "s3-016",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "情報セキュリティリスクの軽減策（リスク低減）として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティ対策を何も実施しない" },
@@ -841,7 +841,7 @@
   },
   {
     "id": "s3-017",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "情報セキュリティ方針における自働化（オートメーション）セキュリティコントロールの導入の利点として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "人為的エラーを減らし、一貫性を保証できる" },
@@ -856,7 +856,7 @@
   },
   {
     "id": "s3-018",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "受託者（データ処理者）の管理において、発注者（データ管理者）が確認すべき最重要項目はどれか。",
     "choices": [
       { "id": "a", "text": "受託者の会社規模" },
@@ -871,7 +871,7 @@
   },
   {
     "id": "s3-019",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "セキュリティパッチ管理における重大度判定と優先順位付けの判断基準として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "パッチを提供したベンダーの規模" },
@@ -886,7 +886,7 @@
   },
   {
     "id": "s3-020",
-    "stageId": "stage3",
+    "stageId": "technology",
     "body": "情報セキュリティマネジメントシステムのPDCAサイクルにおける「A（アクト）」フェーズの主な活動として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "リスク評価と対策の計画を立案する" },
@@ -901,7 +901,7 @@
   },
   {
     "id": "s4-001",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "セキュリティインシデント対応におけるインシデント対応プロセスの最初のフェーズとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "回復（Recovery）" },
@@ -916,7 +916,7 @@
   },
   {
     "id": "s4-002",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "CSIRT（Computer Security Incident Response Team）の主な責務として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "製品の営業とマーケティング" },
@@ -931,7 +931,7 @@
   },
   {
     "id": "s4-003",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応における「包含（Containment）」フェーズの目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "インシデントの全体像を理解する" },
@@ -946,7 +946,7 @@
   },
   {
     "id": "s4-004",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "デジタルフォレンジック調査における重要な原則として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "証拠をできるだけ早く破棄して作業効率を上げる" },
@@ -961,7 +961,7 @@
   },
   {
     "id": "s4-005",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応計画（Incident Response Plan）に含まれるべき重要な要素として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "対応体制・役割分担・連絡先・対応手順・復旧手順" },
@@ -976,7 +976,7 @@
   },
   {
     "id": "s4-006",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "ログ分析（Log Analysis）がインシデント対応において重要な理由として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ログ分析は面白い時間潰しになるから" },
@@ -991,7 +991,7 @@
   },
   {
     "id": "s4-007",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "BCP（事業継続計画）とDR（災害復旧）計画の関係として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "BCPとDRは同じ計画であり、区別する必要がない" },
@@ -1006,7 +1006,7 @@
   },
   {
     "id": "s4-008",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応プロセスにおける「分析（Analysis）」フェーズで実施する活動として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "システムの完全な復旧" },
@@ -1021,7 +1021,7 @@
   },
   {
     "id": "s4-009",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント検出システムとして、異常検知の手法を用いて疑わしい通信パターンを特定する仕組みはどれか。",
     "choices": [
       { "id": "a", "text": "IDS（侵入検知システム）" },
@@ -1036,7 +1036,7 @@
   },
   {
     "id": "s4-010",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応における「回復（Recovery）」フェーズの目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "攻撃者を特定し、逮捕する" },
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "s4-011",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント発生時の情報開示（Disclosure）に関する最適なアプローチとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "インシデント情報は絶対に公開せず、完全に秘密にする" },
@@ -1066,7 +1066,7 @@
   },
   {
     "id": "s4-012",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "ランサムウェア攻撃に対するインシデント対応として、最初に実施すべき行動として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すぐに身代金を支払う" },
@@ -1081,7 +1081,7 @@
   },
   {
     "id": "s4-013",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応における「証拠の保全（Evidence Preservation）」の重要性として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "証拠は重要ではなく、すぐに削除してもよい" },
@@ -1096,7 +1096,7 @@
   },
   {
     "id": "s4-014",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "内部脅威（Insider Threat）の対応に関して、最も重要な予防措置として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべての従業員の監視カメラを設置する" },
@@ -1111,7 +1111,7 @@
   },
   {
     "id": "s4-015",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応における「タイムライン分析（Timeline Analysis）」の目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "攻撃者の物理的な位置を特定する" },
@@ -1126,7 +1126,7 @@
   },
   {
     "id": "s4-016",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "メモリフォレンジック（Memory Forensics）が重要な理由として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ハードディスクフォレンジックだけで十分なため、メモリフォレンジックは不要" },
@@ -1141,7 +1141,7 @@
   },
   {
     "id": "s4-017",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応訓練（Incident Response Drill）を定期的に実施する目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "訓練は不要であり、実際のインシデント発生時に初めて対応する" },
@@ -1156,7 +1156,7 @@
   },
   {
     "id": "s4-018",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "ネットワークトラフィック分析（Network Traffic Analysis）がインシデント調査で有用な理由として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ネットワークトラフィックには情報がないため、分析は無駄" },
@@ -1171,7 +1171,7 @@
   },
   {
     "id": "s4-019",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "インシデント対応における「教訓抽出（Lessons Learned）」フェーズの主な活動として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "インシデント対応を終了し、すべてを忘れて次へ進む" },
@@ -1186,7 +1186,7 @@
   },
   {
     "id": "s4-020",
-    "stageId": "stage4",
+    "stageId": "legal",
     "body": "クラウド環境でのインシデント対応において、特に注意が必要な点として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "クラウドではインシデントは発生しないため、対応計画は不要" },
@@ -1201,7 +1201,7 @@
   },
   {
     "id": "s5-001",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "情報セキュリティマネジメントの全体的なアプローチとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティ技術の導入のみに注力する" },
@@ -1216,7 +1216,7 @@
   },
   {
     "id": "s5-002",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "ゼロトラストセキュリティモデルの基本原則として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "社内ユーザーはすべて信頼できるものとして許可する" },
@@ -1231,7 +1231,7 @@
   },
   {
     "id": "s5-003",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "クラウドセキュリティにおけるセキュリティ責任共有モデル（Shared Responsibility Model）として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべてのセキュリティ責任はクラウドプロバイダーが負う" },
@@ -1246,7 +1246,7 @@
   },
   {
     "id": "s5-004",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "多要素認証（MFA）を導入する主な目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ユーザーの利便性を向上させるため" },
@@ -1261,7 +1261,7 @@
   },
   {
     "id": "s5-005",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "データ暗号化戦略における転送中の暗号化と保存時の暗号化の両方が必要な理由として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "転送中と保存時に異なる脅威が存在するため" },
@@ -1276,7 +1276,7 @@
   },
   {
     "id": "s5-006",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "エンドポイント検知応答（EDR）ソリューションが現代のセキュリティで重要である理由として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ユーザーの生産性を向上させるため" },
@@ -1291,7 +1291,7 @@
   },
   {
     "id": "s5-007",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "SIEM（セキュリティ情報イベント管理）が提供する主な価値として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "ネットワークの物理的な配線管理" },
@@ -1306,7 +1306,7 @@
   },
   {
     "id": "s5-008",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "セキュアコーディングプラクティスの目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "開発速度を最大化する" },
@@ -1321,7 +1321,7 @@
   },
   {
     "id": "s5-009",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "サプライチェーンセキュリティ（Supply Chain Security）の重要性として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "自社のセキュリティだけで十分である" },
@@ -1336,7 +1336,7 @@
   },
   {
     "id": "s5-010",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "情報セキュリティの経営的価値（Business Value）として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティはコストであり、利益とは無関係である" },
@@ -1351,7 +1351,7 @@
   },
   {
     "id": "s5-011",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "API セキュリティにおいて最も重要な対策として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "API は常に信頼できるため、検証は不要" },
@@ -1366,7 +1366,7 @@
   },
   {
     "id": "s5-012",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "デバイス管理（MDM）の主な目的として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "従業員のプライバシーを完全に排除する" },
@@ -1381,7 +1381,7 @@
   },
   {
     "id": "s5-013",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "ランサムウェア対策の多層防御アプローチとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "アンチウイルスソフトだけで十分である" },
@@ -1396,7 +1396,7 @@
   },
   {
     "id": "s5-014",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "リモートワーク環境でのセキュリティ対策として、最も重要なものはどれか。",
     "choices": [
       { "id": "a", "text": "VPN は不要である" },
@@ -1411,7 +1411,7 @@
   },
   {
     "id": "s5-015",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "人工知能（AI）・機械学習（ML）のセキュリティ上の課題として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "AI/ML は完全に安全である" },
@@ -1426,7 +1426,7 @@
   },
   {
     "id": "s5-016",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "ソフトウェアの脆弱性管理における SCA（Software Composition Analysis）の役割として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "SCA は脆弱性管理に関係ない" },
@@ -1441,7 +1441,7 @@
   },
   {
     "id": "s5-017",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "デジタル証拠（Digital Evidence）の法的有効性を確保するために最も重要な要素として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "証拠をすぐに削除する" },
@@ -1456,7 +1456,7 @@
   },
   {
     "id": "s5-018",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "セキュリティスキルギャップの解決策として、組織が採るべきアプローチとして、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "スキルギャップは必然的なもので対策は不要" },
@@ -1471,7 +1471,7 @@
   },
   {
     "id": "s5-019",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "セキュリティイベント（セキュリティインシデントより軽微）と判断する基準として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "すべてのセキュリティアラートはインシデント" },
@@ -1486,7 +1486,7 @@
   },
   {
     "id": "s5-020",
-    "stageId": "stage5",
+    "stageId": "exam-strategy",
     "body": "情報セキュリティの持続的な改善を実現するために最も重要な要因として、最も適切なものはどれか。",
     "choices": [
       { "id": "a", "text": "セキュリティ対策は一度実装すれば完成である" },
