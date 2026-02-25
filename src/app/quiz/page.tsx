@@ -117,7 +117,7 @@ function QuizContent() {
   if (!currentQ || !progress) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse text-slate-400">準備中...</div>
+        <div className="animate-pulse text-brand-400">準備中...</div>
       </div>
     );
   }
@@ -130,30 +130,30 @@ function QuizContent() {
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={() => router.back()}
-            className="text-slate-500 text-sm active:text-slate-700 p-1"
+            className="text-brand-600 text-sm active:text-brand-800 p-1"
           >
             ← 終了
           </button>
-          <span className="text-sm font-medium text-slate-600">{stageName}</span>
+          <span className="text-sm font-medium text-brand-700">{stageName}</span>
           <span className="text-sm text-slate-500">
             {currentIndex + 1} / {questions.length}
           </span>
         </div>
-        <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+        <div className="w-full h-1.5 bg-brand-100 rounded-full overflow-hidden">
           <div
-            className="h-full bg-blue-500 rounded-full transition-all duration-300"
+            className="h-full bg-brand-500 rounded-full transition-all duration-300"
             style={{ width: `${progressPct}%` }}
           />
         </div>
       </div>
 
       <div className="flex-1 px-4 py-4">
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 mb-4">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-brand-100 mb-4">
           <div className="flex items-center gap-2 mb-3">
             <span
               className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                 currentQ.difficulty === 1
-                  ? "bg-green-100 text-green-700"
+                  ? "bg-brand-100 text-brand-700"
                   : currentQ.difficulty === 2
                   ? "bg-amber-100 text-amber-700"
                   : "bg-red-100 text-red-700"
@@ -174,7 +174,7 @@ function QuizContent() {
               </span>
             ))}
           </div>
-          <p className="text-base font-medium text-slate-800 leading-relaxed">
+          <p className="text-base font-medium text-brand-900 leading-relaxed">
             {currentQ.body}
           </p>
         </div>
@@ -182,7 +182,7 @@ function QuizContent() {
         <div className="space-y-3">
           {currentQ.choices.map((choice, i) => {
             const isCorrectChoice = choice.id === currentQ.correct;
-            let style = "bg-white border-slate-200 text-slate-700";
+            let style = "bg-white border-brand-200 text-slate-700";
             if (selectedIndex !== null) {
               if (isCorrectChoice) {
                 style = "bg-green-50 border-green-400 text-green-800";
@@ -200,7 +200,7 @@ function QuizContent() {
                 disabled={selectedIndex !== null}
                 className={`w-full text-left p-4 rounded-xl border-2 transition-all min-h-[52px] ${style} ${
                   selectedIndex === null
-                    ? "active:border-blue-400 active:bg-blue-50"
+                    ? "active:border-brand-400 active:bg-brand-50"
                     : ""
                 }`}
               >
@@ -211,7 +211,7 @@ function QuizContent() {
                         ? "border-green-500 bg-green-500 text-white"
                         : selectedIndex === i && !isCorrectChoice
                         ? "border-red-500 bg-red-500 text-white"
-                        : "border-slate-300 text-slate-500"
+                        : "border-brand-300 text-brand-500"
                     }`}
                   >
                     {String.fromCharCode(65 + i)}
@@ -226,16 +226,16 @@ function QuizContent() {
         </div>
 
         {showExplanation && (
-          <div className="mt-4 bg-blue-50 rounded-2xl p-4 border border-blue-100">
+          <div className="mt-4 bg-brand-50 rounded-2xl p-4 border border-brand-200">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm font-bold text-blue-700">
+              <span className="text-sm font-bold text-brand-700">
                 {selectedIndex !== null &&
                 currentQ.choices[selectedIndex].id === currentQ.correct
                   ? "⭐ 正解！"
                   : "✗ 不正解"}
               </span>
             </div>
-            <p className="text-sm text-blue-800 leading-relaxed">
+            <p className="text-sm text-brand-800 leading-relaxed">
               {currentQ.explanation}
             </p>
           </div>
@@ -246,7 +246,7 @@ function QuizContent() {
         <div className="px-4 pb-6 pt-2">
           <button
             onClick={handleNext}
-            className="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl active:bg-blue-700 transition-colors text-base"
+            className="w-full bg-brand-700 text-white font-bold py-4 rounded-2xl active:bg-brand-800 transition-colors text-base"
           >
             {currentIndex >= questions.length - 1
               ? "結果を見る"
@@ -263,7 +263,7 @@ export default function QuizPage() {
     <Suspense
       fallback={
         <div className="flex items-center justify-center min-h-screen">
-          <div className="animate-pulse text-slate-400">準備中...</div>
+          <div className="animate-pulse text-brand-400">準備中...</div>
         </div>
       }
     >
